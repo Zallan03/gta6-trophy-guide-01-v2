@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, a checklist saved in your browser, a four-stage roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript><p class="noscript-note">This guide needs JavaScript: the trophy list loads from its own data file and your progress is saved in your browser.</p></noscript>
+<header class="masthead">
+  <div class="masthead-title">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Platinum</h1>
+    <p class="tagline">The offline trophy guide &amp; tracker — every guide in our own words, every fact cited.</p>
+  </div>
+  <div class="progress-box" id="progressBox" aria-live="polite">
+    <p class="progress-number"><span id="earnedTotal">0</span><span class="progress-total"> / 55 earned</span></p>
+    <p class="progress-sub" id="progressSub">0% of the way to the platinum</p>
+    <div class="meter"><div class="meter-fill" id="meterFill" style="width:0%"></div></div>
+    <p class="progress-grades" id="progressGrades">1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze in the list</p>
+  </div>
+</header>
+<nav class="section-tabs" aria-label="Guide sections">
+  <button type="button" class="section-tab is-active" data-section="tracker">Tracker</button>
+  <button type="button" class="section-tab" data-section="roadmap">Roadmap to Platinum</button>
+  <button type="button" class="section-tab" data-section="missables">Missables <span class="count-pill" id="missableTotal">18</span></button>
+  <button type="button" class="section-tab" data-section="sources">Sources &amp; About</button>
+</nav>
+<main>
+  <section id="section-tracker" class="panel is-active" aria-label="Trophy tracker">
+    <div class="controls">
+      <label class="field field-search">Search <input id="searchBox" type="search" placeholder="Name, mission or keyword…" autocomplete="off"></label>
+      <label class="field">Kind
+        <select id="kindSelect">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="side">Stranger strands</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+          <option value="robbery">Robberies</option>
+          <option value="progression">Progress &amp; money</option>
+          <option value="platinum">Platinum</option>
+          <option value="online">Online</option>
+        </select>
+      </label>
+      <label class="field">Grade
+        <select id="gradeSelect">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toggle"><input id="missableCheck" type="checkbox"> Missable only</label>
+      <label class="toggle"><input id="hideEarnedCheck" type="checkbox"> Hide earned</label>
+      <label class="toggle toggle-spoiler"><input id="spoilerCheck" type="checkbox"> Spoiler-safe mode</label>
+      <span class="controls-gap"></span>
+      <button id="exportButton" type="button">Export progress</button>
+      <label class="import-label">Import progress <input id="importInput" type="file" accept="application/json,.json"></label>
+      <button id="resetButton" type="button" class="button-ghost">Reset</button>
+    </div>
+    <p class="spoiler-banner" id="spoilerBanner" hidden>Spoiler-safe mode is on: story trophies you have not earned yet show as hidden until you earn them.</p>
+    <p class="demo-banner" id="demoBanner" hidden>Demo view: 13 trophies are ticked so you can see the tracker with progress. Real readers start at 0 of 55.</p>
+    <div class="tracker-layout">
+      <div class="tracker-list-wrap">
+        <p class="list-status" id="listStatus">Showing 55 of 55 trophies</p>
+        <ul class="trophy-rows" id="trophyRows"></ul>
+        <p class="empty-note" id="emptyNote" hidden>No trophies match these filters — the official list contains no online trophies, so the Online kind is always empty.</p>
+      </div>
+      <aside class="guide-pane" id="guidePane" aria-live="polite"></aside>
+    </div>
+  </section>
+  <section id="section-roadmap" class="panel" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="intro">Four stages, in order, built from the official trophy descriptions. Story first (12 trophies), then the stranger strands (7), then activities and robberies (22), then the clean-up (14) that ends in 100% completion and the platinum.</p>
+    <div class="stage-grid" id="stageGrid"></div>
+  </section>
+  <section id="section-missables" class="panel" aria-label="Missable trophies">
+    <h2>Missable trophies — the one-shot moments</h2>
+    <p class="intro">Nothing on this list is confirmed permanently missable from its official description: story missions can be replayed, and counters keep counting after the story. What <em>is</em> easy to miss is a <strong>one-shot moment</strong> — a trophy tied to a single mission or a specific setup. Do these deliberately, in the mission or setup named, and replay the mission if the game offers mission replay and the trophy does not pop.</p>
+    <ul class="trophy-rows" id="missableRows"></ul>
+  </section>
+  <section id="section-sources" class="panel" aria-label="Sources and about">
+    <h2>Sources &amp; about</h2>
+    <p class="intro">Every trophy name, description and grade in this guide is the official PlayStation list, as published on Exophase and PSNProfiles, who agree on all 55. Every guide is written in our own words for this entry and names its sources beside it. Where the official description names no place, person or method, the guide says so instead of inventing one.</p>
+    <h3>Sources used for every trophy</h3>
+    <ul class="about-list">
+      <li><a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase — Grand Theft Auto VI trophies</a> — official names, descriptions and grades (55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze, 28 hidden).</li>
+      <li><a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles — Grand Theft Auto VI trophies</a> — PSN progress targets (for example 42 Shooting Range challenges, 14 drone races, 52 areas of Leonida) and rarity.</li>
+    </ul>
+    <h3>How this guide works</h3>
+    <ul class="about-list">
+      <li><strong>Saved progress:</strong> ticking a trophy saves it in your browser (localStorage). Export it to a file and import it back any time.</li>
+      <li><strong>Filters:</strong> filter by kind (story, stranger strands, collectibles, activities, robberies, progress &amp; money, platinum — or online, which the official list has none of), by grade, by missable-only, or search by name, mission or keyword.</li>
+      <li><strong>Spoiler-safe mode:</strong> hides the names and descriptions of story trophies you have not earned yet.</li>
+      <li><strong>Offline:</strong> this guide is plain static files. It loads nothing from the network and works with the network off.</li>
+      <li><strong>No Rockstar artwork:</strong> the look is our own — no logo, box art or game screenshots.</li>
+    </ul>
+    <p class="fineprint">An unofficial fan guide. Grand Theft Auto and GTA are trademarks of Rockstar Games / Take-Two Interactive. Trophy names and descriptions are shown as PlayStation publishes them; all guide text is original to this entry.</p>
+  </section>
+</main>
+<footer>
+  <p>Leonida Platinum &middot; an offline, open-source GTA VI trophy guide &middot; 55 trophies &middot; progress stays in your browser</p>
+</footer>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
